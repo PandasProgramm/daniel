@@ -1,20 +1,22 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './features/header/header.component';
-import { FooterComponent } from './features/footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {StartModule} from './features/startmodul/start.module';
+import {AppRouting} from './shared/routes';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StartModule,
+    AppRouting
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
