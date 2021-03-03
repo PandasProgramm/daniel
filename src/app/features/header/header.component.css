@@ -1,0 +1,10 @@
+.header{
+  background-color: #003366;
+  color: white;
+}
+.nav-item{
+  color: white;
+}
+.nav-item:hover{
+  text-decoration: underline;
+}
